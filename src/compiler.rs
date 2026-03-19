@@ -2,7 +2,7 @@
 // File: src/compiler.rs
 // Project: snap-coin-opcode
 // Description: Encode a list of tokens into opcode amounts for snap-coin-pay
-// Version: 0.1.0
+// Version: 0.2.0
 // -----------------------------------------------------------------------------
 
 use crate::dictionary::Dictionary;
@@ -36,14 +36,6 @@ impl<'a> Compiler<'a> {
             resolved_tokens.push(token.to_string());
         }
 
-        // always append END
-        let end_entry = self.dictionary.lookup_token("END").ok_or_else(|| {
-            "END token missing from dictionary".to_string()
-        })?;
-        let end_amount = parse_amount(&end_entry.amount)?;
-        amounts.push(end_amount);
-        resolved_tokens.push("END".to_string());
-
         Ok(CompiledMessage {
             amounts,
             tokens: resolved_tokens,
@@ -51,9 +43,6 @@ impl<'a> Compiler<'a> {
     }
 }
 
-// parse "0.00100010" into u64 nano units
-// SNAP atomic unit is 8 decimal places
-// so 0.00100010 -> 100010
 fn parse_amount(amount_str: &str) -> Result<u64, String> {
     let parts: Vec<&str> = amount_str.split('.').collect();
     if parts.len() != 2 {

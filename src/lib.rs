@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Project: snap-coin-opcode
 // Description: SNAP Coin opcode encoder/decoder library - public API
-// Version: 0.1.0
+// Version: 0.2.0
 // -----------------------------------------------------------------------------
 
 pub mod dictionary;
@@ -12,7 +12,6 @@ pub mod decoder;
 pub use dictionary::{Dictionary, DictionaryEntry};
 pub use compiler::{Compiler, CompiledMessage};
 pub use decoder::{Decoder, DecodedOpcode, DecodedMessage};
-
 
 #[cfg(test)]
 mod tests {
@@ -33,10 +32,8 @@ mod tests {
         let dict = load_dict();
         let compiler = Compiler::new(&dict);
         let result = compiler.compile(&["HELLO"]).expect("compile failed");
-        // HELLO + END = 2 amounts
-        assert_eq!(result.amounts.len(), 2);
+        assert_eq!(result.amounts.len(), 1);
         assert_eq!(result.tokens[0], "HELLO");
-        assert_eq!(result.tokens[1], "END");
     }
 
     #[test]
@@ -46,7 +43,6 @@ mod tests {
         let decoder = Decoder::new(&dict);
         let compiled = compiler.compile(&["HELLO"]).expect("compile failed");
         let decoded = decoder.decode_message(&compiled.amounts);
-        assert!(decoded.is_complete);
         assert_eq!(decoded.opcodes.len(), 1);
         assert_eq!(decoded.opcodes[0].meaning, "Initiate contact");
     }
@@ -58,7 +54,7 @@ mod tests {
         let decoder = Decoder::new(&dict);
         let compiled = compiler.compile(&["MEET_TOMORROW_1400"]).expect("compile failed");
         let decoded = decoder.decode_message(&compiled.amounts);
-        assert!(decoded.is_complete);
+        assert_eq!(decoded.opcodes.len(), 1);
         assert_eq!(decoded.opcodes[0].meaning, "Meeting requested tomorrow at 14:00");
     }
 
@@ -75,12 +71,18 @@ mod tests {
     fn test_unknown_amount_skipped() {
         let dict = load_dict();
         let decoder = Decoder::new(&dict);
-        // 99999999 is not in dictionary
         let decoded = decoder.decode_message(&[99999999]);
-        assert!(!decoded.is_complete);
         assert_eq!(decoded.opcodes.len(), 0);
     }
+
+    #[test]
+    fn test_question_has_answers() {
+        let dict = load_dict();
+        let answers = dict.answers_for_question("0001");
+        assert!(!answers.is_empty());
+    }
 }
+
 // -----------------------------------------------------------------------------
 // File: src/lib.rs
 // Project: snap-coin-opcode

@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "SNAP Coin Opcode Dictionary - Source of Truth",
   "families": {
     "00": "control",
@@ -13,14 +13,6 @@
     "08": "answer"
   },
   "entries": {
-    "END": {
-      "type": "control",
-      "family": "00",
-      "opcode": "9999",
-      "amount": "0.00099990",
-      "category": "control",
-      "meaning": "End of message sequence"
-    },
     "HELLO": {
       "type": "word",
       "family": "01",
@@ -371,7 +363,7 @@
       "opcode": "0001",
       "amount": "0.00500010",
       "category": "status",
-      "meaning": "High priority, reply needed"
+      "meaning": "High priority reply needed"
     },
     "PENDING": {
       "type": "word",

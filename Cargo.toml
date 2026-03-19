@@ -1,0 +1,10 @@
+[package]
+name = "snap-coin-opcode"
+version = "0.1.0"
+edition = "2024"
+description = "SNAP Coin opcode encoder/decoder library - dictionary driven protocol layer"
+
+[dependencies]
+snap-coin-pay = { path = "../snap-coin-pay" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

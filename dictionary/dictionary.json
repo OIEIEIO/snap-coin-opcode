@@ -1,0 +1,557 @@
+{
+  "version": "0.1.0",
+  "description": "SNAP Coin Opcode Dictionary - Source of Truth",
+  "families": {
+    "00": "control",
+    "01": "handshake",
+    "02": "response",
+    "03": "scheduling",
+    "04": "workflow",
+    "05": "status",
+    "06": "single_word",
+    "07": "question",
+    "08": "answer"
+  },
+  "entries": {
+    "END": {
+      "type": "control",
+      "family": "00",
+      "opcode": "9999",
+      "amount": "0.00099990",
+      "category": "control",
+      "meaning": "End of message sequence"
+    },
+    "HELLO": {
+      "type": "word",
+      "family": "01",
+      "opcode": "0001",
+      "amount": "0.00100010",
+      "category": "handshake",
+      "meaning": "Initiate contact"
+    },
+    "ACK": {
+      "type": "word",
+      "family": "01",
+      "opcode": "0002",
+      "amount": "0.00100020",
+      "category": "handshake",
+      "meaning": "Received and understood"
+    },
+    "BYE": {
+      "type": "word",
+      "family": "01",
+      "opcode": "0003",
+      "amount": "0.00100030",
+      "category": "handshake",
+      "meaning": "End of conversation"
+    },
+    "YES": {
+      "type": "word",
+      "family": "02",
+      "opcode": "0001",
+      "amount": "0.00200010",
+      "category": "response",
+      "meaning": "Affirmative"
+    },
+    "NO": {
+      "type": "word",
+      "family": "02",
+      "opcode": "0002",
+      "amount": "0.00200020",
+      "category": "response",
+      "meaning": "Negative"
+    },
+    "ACCEPT": {
+      "type": "word",
+      "family": "02",
+      "opcode": "0003",
+      "amount": "0.00200030",
+      "category": "response",
+      "meaning": "Approve the prior request"
+    },
+    "REJECT": {
+      "type": "word",
+      "family": "02",
+      "opcode": "0004",
+      "amount": "0.00200040",
+      "category": "response",
+      "meaning": "Decline the prior request"
+    },
+    "MEET_TODAY_0600": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0001",
+      "amount": "0.00300010",
+      "category": "scheduling",
+      "meaning": "Meeting requested today at 06:00",
+      "display": "Meet Today 06:00"
+    },
+    "MEET_TODAY_0700": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0002",
+      "amount": "0.00300020",
+      "category": "scheduling",
+      "meaning": "Meeting requested today at 07:00",
+      "display": "Meet Today 07:00"
+    },
+    "MEET_TODAY_0800": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0003",
+      "amount": "0.00300030",
+      "category": "scheduling",
+      "meaning": "Meeting requested today at 08:00",
+      "display": "Meet Today 08:00"
+    },
+    "MEET_TODAY_0900": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0004",
+      "amount": "0.00300040",
+      "category": "scheduling",
+      "meaning": "Meeting requested today at 09:00",
+      "display": "Meet Today 09:00"
+    },
+    "MEET_TODAY_1000": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0005",
+      "amount": "0.00300050",
+      "category": "scheduling",
+      "meaning": "Meeting requested today at 10:00",
+      "display": "Meet Today 10:00"
+    },
+    "MEET_TODAY_1100": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0006",
+      "amount": "0.00300060",
+      "category": "scheduling",
+      "meaning": "Meeting requested today at 11:00",
+      "display": "Meet Today 11:00"
+    },
+    "MEET_TODAY_1200": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0007",
+      "amount": "0.00300070",
+      "category": "scheduling",
+      "meaning": "Meeting requested today at 12:00",
+      "display": "Meet Today 12:00"
+    },
+    "MEET_TODAY_1300": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0008",
+      "amount": "0.00300080",
+      "category": "scheduling",
+      "meaning": "Meeting requested today at 13:00",
+      "display": "Meet Today 13:00"
+    },
+    "MEET_TODAY_1400": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0009",
+      "amount": "0.00300090",
+      "category": "scheduling",
+      "meaning": "Meeting requested today at 14:00",
+      "display": "Meet Today 14:00"
+    },
+    "MEET_TODAY_1500": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0010",
+      "amount": "0.00300100",
+      "category": "scheduling",
+      "meaning": "Meeting requested today at 15:00",
+      "display": "Meet Today 15:00"
+    },
+    "MEET_TODAY_1600": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0011",
+      "amount": "0.00300110",
+      "category": "scheduling",
+      "meaning": "Meeting requested today at 16:00",
+      "display": "Meet Today 16:00"
+    },
+    "MEET_TODAY_1700": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0012",
+      "amount": "0.00300120",
+      "category": "scheduling",
+      "meaning": "Meeting requested today at 17:00",
+      "display": "Meet Today 17:00"
+    },
+    "MEET_TOMORROW_0600": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0013",
+      "amount": "0.00300130",
+      "category": "scheduling",
+      "meaning": "Meeting requested tomorrow at 06:00",
+      "display": "Meet Tomorrow 06:00"
+    },
+    "MEET_TOMORROW_0700": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0014",
+      "amount": "0.00300140",
+      "category": "scheduling",
+      "meaning": "Meeting requested tomorrow at 07:00",
+      "display": "Meet Tomorrow 07:00"
+    },
+    "MEET_TOMORROW_0800": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0015",
+      "amount": "0.00300150",
+      "category": "scheduling",
+      "meaning": "Meeting requested tomorrow at 08:00",
+      "display": "Meet Tomorrow 08:00"
+    },
+    "MEET_TOMORROW_0900": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0016",
+      "amount": "0.00300160",
+      "category": "scheduling",
+      "meaning": "Meeting requested tomorrow at 09:00",
+      "display": "Meet Tomorrow 09:00"
+    },
+    "MEET_TOMORROW_1000": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0017",
+      "amount": "0.00300170",
+      "category": "scheduling",
+      "meaning": "Meeting requested tomorrow at 10:00",
+      "display": "Meet Tomorrow 10:00"
+    },
+    "MEET_TOMORROW_1100": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0018",
+      "amount": "0.00300180",
+      "category": "scheduling",
+      "meaning": "Meeting requested tomorrow at 11:00",
+      "display": "Meet Tomorrow 11:00"
+    },
+    "MEET_TOMORROW_1200": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0019",
+      "amount": "0.00300190",
+      "category": "scheduling",
+      "meaning": "Meeting requested tomorrow at 12:00",
+      "display": "Meet Tomorrow 12:00"
+    },
+    "MEET_TOMORROW_1300": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0020",
+      "amount": "0.00300200",
+      "category": "scheduling",
+      "meaning": "Meeting requested tomorrow at 13:00",
+      "display": "Meet Tomorrow 13:00"
+    },
+    "MEET_TOMORROW_1400": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0021",
+      "amount": "0.00300210",
+      "category": "scheduling",
+      "meaning": "Meeting requested tomorrow at 14:00",
+      "display": "Meet Tomorrow 14:00"
+    },
+    "MEET_TOMORROW_1500": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0022",
+      "amount": "0.00300220",
+      "category": "scheduling",
+      "meaning": "Meeting requested tomorrow at 15:00",
+      "display": "Meet Tomorrow 15:00"
+    },
+    "MEET_TOMORROW_1600": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0023",
+      "amount": "0.00300230",
+      "category": "scheduling",
+      "meaning": "Meeting requested tomorrow at 16:00",
+      "display": "Meet Tomorrow 16:00"
+    },
+    "MEET_TOMORROW_1700": {
+      "type": "phrase",
+      "family": "03",
+      "opcode": "0024",
+      "amount": "0.00300240",
+      "category": "scheduling",
+      "meaning": "Meeting requested tomorrow at 17:00",
+      "display": "Meet Tomorrow 17:00"
+    },
+    "QUOTE_REQUEST": {
+      "type": "word",
+      "family": "04",
+      "opcode": "0001",
+      "amount": "0.00400010",
+      "category": "workflow",
+      "meaning": "Request a price quote"
+    },
+    "QUOTE_SENT": {
+      "type": "word",
+      "family": "04",
+      "opcode": "0002",
+      "amount": "0.00400020",
+      "category": "workflow",
+      "meaning": "Quote has been sent"
+    },
+    "QUOTE_ACCEPTED": {
+      "type": "word",
+      "family": "04",
+      "opcode": "0003",
+      "amount": "0.00400030",
+      "category": "workflow",
+      "meaning": "Quote has been accepted"
+    },
+    "QUOTE_REJECTED": {
+      "type": "word",
+      "family": "04",
+      "opcode": "0004",
+      "amount": "0.00400040",
+      "category": "workflow",
+      "meaning": "Quote has been rejected"
+    },
+    "JOB_START": {
+      "type": "word",
+      "family": "04",
+      "opcode": "0005",
+      "amount": "0.00400050",
+      "category": "workflow",
+      "meaning": "Job has started"
+    },
+    "JOB_COMPLETE": {
+      "type": "word",
+      "family": "04",
+      "opcode": "0006",
+      "amount": "0.00400060",
+      "category": "workflow",
+      "meaning": "Job is complete"
+    },
+    "INVOICE_SENT": {
+      "type": "word",
+      "family": "04",
+      "opcode": "0007",
+      "amount": "0.00400070",
+      "category": "workflow",
+      "meaning": "Invoice has been sent"
+    },
+    "PAYMENT_SENT": {
+      "type": "word",
+      "family": "04",
+      "opcode": "0008",
+      "amount": "0.00400080",
+      "category": "workflow",
+      "meaning": "Payment has been sent"
+    },
+    "PAYMENT_RECEIVED": {
+      "type": "word",
+      "family": "04",
+      "opcode": "0009",
+      "amount": "0.00400090",
+      "category": "workflow",
+      "meaning": "Payment has been received"
+    },
+    "URGENT": {
+      "type": "word",
+      "family": "05",
+      "opcode": "0001",
+      "amount": "0.00500010",
+      "category": "status",
+      "meaning": "High priority, reply needed"
+    },
+    "PENDING": {
+      "type": "word",
+      "family": "05",
+      "opcode": "0002",
+      "amount": "0.00500020",
+      "category": "status",
+      "meaning": "Waiting or in progress"
+    },
+    "DELAYED": {
+      "type": "word",
+      "family": "05",
+      "opcode": "0003",
+      "amount": "0.00500030",
+      "category": "status",
+      "meaning": "Work or response is delayed"
+    },
+    "CANCELLED": {
+      "type": "word",
+      "family": "05",
+      "opcode": "0004",
+      "amount": "0.00500040",
+      "category": "status",
+      "meaning": "Job or meeting is cancelled"
+    },
+    "AVAILABLE": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0001",
+      "amount": "0.00600010",
+      "category": "single_word",
+      "meaning": "Currently available"
+    },
+    "UNAVAILABLE": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0002",
+      "amount": "0.00600020",
+      "category": "single_word",
+      "meaning": "Currently unavailable"
+    },
+    "AVAILABLE?": {
+      "type": "word",
+      "family": "07",
+      "opcode": "0001",
+      "amount": "0.00700010",
+      "category": "question",
+      "meaning": "Are you available?",
+      "answer_family": "08",
+      "answer_opcode_start": "0001"
+    },
+    "CONFIRMED?": {
+      "type": "word",
+      "family": "07",
+      "opcode": "0002",
+      "amount": "0.00700020",
+      "category": "question",
+      "meaning": "Is this confirmed?",
+      "answer_family": "08",
+      "answer_opcode_start": "0002"
+    },
+    "QUOTE_READY?": {
+      "type": "word",
+      "family": "07",
+      "opcode": "0003",
+      "amount": "0.00700030",
+      "category": "question",
+      "meaning": "Is the quote ready?",
+      "answer_family": "08",
+      "answer_opcode_start": "0003"
+    },
+    "JOB_COMPLETE?": {
+      "type": "word",
+      "family": "07",
+      "opcode": "0004",
+      "amount": "0.00700040",
+      "category": "question",
+      "meaning": "Is the job complete?",
+      "answer_family": "08",
+      "answer_opcode_start": "0004"
+    },
+    "PAYMENT_SENT?": {
+      "type": "word",
+      "family": "07",
+      "opcode": "0005",
+      "amount": "0.00700050",
+      "category": "question",
+      "meaning": "Has payment been sent?",
+      "answer_family": "08",
+      "answer_opcode_start": "0005"
+    },
+    "YES_AVAILABLE": {
+      "type": "word",
+      "family": "08",
+      "opcode": "0001",
+      "amount": "0.00800010",
+      "category": "answer",
+      "meaning": "Yes I am available",
+      "answers_question": "0001"
+    },
+    "YES_CONFIRMED": {
+      "type": "word",
+      "family": "08",
+      "opcode": "0002",
+      "amount": "0.00800020",
+      "category": "answer",
+      "meaning": "Yes it is confirmed",
+      "answers_question": "0002"
+    },
+    "YES_QUOTE_READY": {
+      "type": "word",
+      "family": "08",
+      "opcode": "0003",
+      "amount": "0.00800030",
+      "category": "answer",
+      "meaning": "Yes the quote is ready",
+      "answers_question": "0003"
+    },
+    "YES_JOB_COMPLETE": {
+      "type": "word",
+      "family": "08",
+      "opcode": "0004",
+      "amount": "0.00800040",
+      "category": "answer",
+      "meaning": "Yes the job is complete",
+      "answers_question": "0004"
+    },
+    "YES_PAYMENT_SENT": {
+      "type": "word",
+      "family": "08",
+      "opcode": "0005",
+      "amount": "0.00800050",
+      "category": "answer",
+      "meaning": "Yes payment has been sent",
+      "answers_question": "0005"
+    },
+    "NO_UNAVAILABLE": {
+      "type": "word",
+      "family": "08",
+      "opcode": "0011",
+      "amount": "0.00800110",
+      "category": "answer",
+      "meaning": "No I am not available",
+      "answers_question": "0001"
+    },
+    "NO_NOT_CONFIRMED": {
+      "type": "word",
+      "family": "08",
+      "opcode": "0012",
+      "amount": "0.00800120",
+      "category": "answer",
+      "meaning": "No it is not confirmed",
+      "answers_question": "0002"
+    },
+    "NO_QUOTE_NOT_READY": {
+      "type": "word",
+      "family": "08",
+      "opcode": "0013",
+      "amount": "0.00800130",
+      "category": "answer",
+      "meaning": "No the quote is not ready",
+      "answers_question": "0003"
+    },
+    "NO_JOB_NOT_COMPLETE": {
+      "type": "word",
+      "family": "08",
+      "opcode": "0014",
+      "amount": "0.00800140",
+      "category": "answer",
+      "meaning": "No the job is not complete",
+      "answers_question": "0004"
+    },
+    "NO_PAYMENT_NOT_SENT": {
+      "type": "word",
+      "family": "08",
+      "opcode": "0015",
+      "amount": "0.00800150",
+      "category": "answer",
+      "meaning": "No payment has not been sent",
+      "answers_question": "0005"
+    }
+  }
+}

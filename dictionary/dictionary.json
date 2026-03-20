@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "SNAP Coin Opcode Dictionary - Source of Truth",
   "families": {
     "00": "control",
@@ -36,6 +36,40 @@
       "amount": "0.00100030",
       "category": "handshake",
       "meaning": "End of conversation"
+    },
+    "NICE_TO_MEET_YOU": {
+      "type": "phrase",
+      "family": "01",
+      "opcode": "0004",
+      "amount": "0.00100040",
+      "category": "handshake",
+      "meaning": "Greeting on first contact",
+      "display": "Nice To Meet You"
+    },
+    "YOURE_WELCOME": {
+      "type": "phrase",
+      "family": "01",
+      "opcode": "0005",
+      "amount": "0.00100050",
+      "category": "handshake",
+      "meaning": "Response to thanks",
+      "display": "You're Welcome"
+    },
+    "START": {
+      "type": "word",
+      "family": "01",
+      "opcode": "0006",
+      "amount": "0.00100060",
+      "category": "handshake",
+      "meaning": "Begin a message sequence"
+    },
+    "END": {
+      "type": "word",
+      "family": "01",
+      "opcode": "0007",
+      "amount": "0.00100070",
+      "category": "handshake",
+      "meaning": "Close a message sequence"
     },
     "YES": {
       "type": "word",
@@ -404,6 +438,166 @@
       "amount": "0.00600020",
       "category": "single_word",
       "meaning": "Currently unavailable"
+    },
+    "OK": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0003",
+      "amount": "0.00600030",
+      "category": "single_word",
+      "meaning": "Acknowledged or agreed"
+    },
+    "THANKS": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0004",
+      "amount": "0.00600040",
+      "category": "single_word",
+      "meaning": "Express gratitude"
+    },
+    "SORRY": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0005",
+      "amount": "0.00600050",
+      "category": "single_word",
+      "meaning": "Apologise"
+    },
+    "PLEASE": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0006",
+      "amount": "0.00600060",
+      "category": "single_word",
+      "meaning": "Polite request modifier"
+    },
+    "WELCOME": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0007",
+      "amount": "0.00600070",
+      "category": "single_word",
+      "meaning": "Greeting or acknowledgement of thanks"
+    },
+    "NOTED": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0008",
+      "amount": "0.00600080",
+      "category": "single_word",
+      "meaning": "Information received and logged"
+    },
+    "UNDERSTOOD": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0009",
+      "amount": "0.00600090",
+      "category": "single_word",
+      "meaning": "Fully comprehended"
+    },
+    "GOOD": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0010",
+      "amount": "0.00600100",
+      "category": "single_word",
+      "meaning": "Positive acknowledgement"
+    },
+    "BAD": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0011",
+      "amount": "0.00600110",
+      "category": "single_word",
+      "meaning": "Negative acknowledgement"
+    },
+    "GREAT": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0012",
+      "amount": "0.00600120",
+      "category": "single_word",
+      "meaning": "Strong positive response"
+    },
+    "FINE": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0013",
+      "amount": "0.00600130",
+      "category": "single_word",
+      "meaning": "Acceptable or neutral status"
+    },
+    "PROBLEM": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0014",
+      "amount": "0.00600140",
+      "category": "single_word",
+      "meaning": "Issue exists that needs attention"
+    },
+    "WAIT": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0015",
+      "amount": "0.00600150",
+      "category": "single_word",
+      "meaning": "Pause or hold on"
+    },
+    "NOW": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0016",
+      "amount": "0.00600160",
+      "category": "single_word",
+      "meaning": "Immediately or at this moment"
+    },
+    "SOON": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0017",
+      "amount": "0.00600170",
+      "category": "single_word",
+      "meaning": "In a short while"
+    },
+    "LATER": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0018",
+      "amount": "0.00600180",
+      "category": "single_word",
+      "meaning": "At a future time"
+    },
+    "HERE": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0019",
+      "amount": "0.00600190",
+      "category": "single_word",
+      "meaning": "Present at this location"
+    },
+    "DONE": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0020",
+      "amount": "0.00600200",
+      "category": "single_word",
+      "meaning": "Task or action completed"
+    },
+    "READY": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0021",
+      "amount": "0.00600210",
+      "category": "single_word",
+      "meaning": "Prepared and able to proceed"
+    },
+    "BUSY": {
+      "type": "word",
+      "family": "06",
+      "opcode": "0022",
+      "amount": "0.00600220",
+      "category": "single_word",
+      "meaning": "Occupied and unable to respond fully"
     },
     "AVAILABLE?": {
       "type": "word",
